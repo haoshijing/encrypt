@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hulian.encrypt.dao.EncryptDao">
+
+    <sql id="tableName">
+        devauth
+    </sql>
+    <!-- 插入一条记录 -->
+    <insert id="insert" parameterType="com.hulian.encrypt.po.DevauthPo">
+        INSERT INTO <include refid="tableName"/>
+        (
+        devId,
+        serialNo,
+        createTime
+        )
+        VALUES (
+        #{devId},
+        #{serialNo},
+        #{createTime}
+        )
+    </insert>
+
+    <select id = "selectByDevId" parameterType="java.lang.String" resultType="com.hulian.encrypt.po.DevauthPo" >
+        select * from  <include refid="tableName"/>
+        where devId = #{devId}
+    </select>
+
+    <select id = "selectList" resultType="com.hulian.encrypt.po.DevauthPo">
+            select * from devauth
+            where 1 = 1
+            <if test = "param.devId != null and param.devId != ''">
+                AND devId = #{param.devId}
+            </if>
+        limit #{limit} ,#{offset}
+    </select>
+
+    <select id =  "selectCount"  resultType="java.lang.Integer">
+        select count(1)  from devauth
+        where 1 = 1
+        <if test = "param.devId != null and param.devId != ''">
+            AND devId = #{param.devId}
+        </if>
+    </select>
+
+
+    <update id = "updateById">
+        update devauth set serialNo = #{serialNo} ,lastUpdateTime = #{lastUpdateTime}
+        where id = #{id}
+    </update>
+
+</mapper>

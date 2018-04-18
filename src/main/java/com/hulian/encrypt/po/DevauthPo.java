@@ -3,21 +3,21 @@ package com.hulian.encrypt.po;
 import lombok.Data;
 
 @Data
-public class EncryptPo {
+public class DevauthPo {
     private Integer id;
     /**
      * 硬件id
      */
-    private String hardId;
+    private String devId;
 
     /**
      * 序列编码
      */
-    private String licence;
+    private String serialNo;
     /**
      * 生成时间
      */
-    private Long createTime;
+    private Long logDate;
 
     /**
      * 最后修改时间

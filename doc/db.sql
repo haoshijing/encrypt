@@ -1,8 +1,8 @@
 drop table  if EXISTS encrypt;
-create table t_encrypt_data(
+create table devauth(
   id int primary key auto_increment comment '主键id',
-  hardId varchar(150) comment '硬件id',
-  licence varchar(2048) comment '序列号',
-  createTime bigint comment '创建时间',
+  devId varchar(150) comment '设备ID',
+  serialNo varchar(2048) comment '授权系列号',
+  logDate bigint comment '登记日期',
   lastUpdateTime bigint comment '最后修改时间'
 );
