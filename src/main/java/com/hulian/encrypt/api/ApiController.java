@@ -2,9 +2,7 @@ package com.hulian.encrypt.api;
 
 import com.hulian.encrypt.base.ApiResponse;
 import com.hulian.encrypt.dao.DevauthtDao;
-import com.hulian.encrypt.dao.EncryptDao;
 import com.hulian.encrypt.po.DevauthPo;
-import com.hulian.encrypt.po.EncryptPo;
 import com.hulian.encrypt.util.CheckService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
