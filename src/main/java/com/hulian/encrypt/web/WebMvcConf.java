@@ -18,8 +18,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @Slf4j
 public class WebMvcConf extends WebMvcConfigurerAdapter {
 
-    @Autowired
-    private AuthInterceptor authInterceptor;
 
     @Autowired
     private ProcessInterceptor processInterceptor;
@@ -32,8 +30,6 @@ public class WebMvcConf extends WebMvcConfigurerAdapter {
     public void addInterceptors(InterceptorRegistry registry) {
         // 注册监控拦截器
         registry.addInterceptor(processInterceptor)
-                .addPathPatterns("/**");
-        registry.addInterceptor(authInterceptor)
                 .addPathPatterns("/**");
     }
 
