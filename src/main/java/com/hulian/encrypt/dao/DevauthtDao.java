@@ -15,4 +15,6 @@ public interface DevauthtDao {
     Integer selectCount(@Param("param") DevauthPo devauthPo);
 
     Integer updateById(DevauthPo devauthPo);
+
+
 }
