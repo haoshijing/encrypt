@@ -20,8 +20,8 @@ import java.util.stream.Collectors;
  * @version 2018年04月18日 10:54
  **/
 
-@RequestMapping("/api/admin")
 @RestController
+@RequestMapping("/dev")
 public class AdminController {
 
     @Autowired
@@ -44,7 +44,7 @@ public class AdminController {
            devauthVo.setLogDate(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(devauthPo.getLogDate())));
            return devauthVo;
        }).collect(Collectors.toList());
-       return  new ApiResponse(devauthPos);
+       return  new ApiResponse(devauthVos);
     }
 
     @RequestMapping("/queryCount")

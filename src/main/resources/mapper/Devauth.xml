@@ -32,7 +32,7 @@
             <if test = "param.devId != null and param.devId != ''">
                 AND devId = #{param.devId}
             </if>
-        limit #{limit} ,#{offset}
+        limit #{offset} ,#{limit}
     </select>
 
     <select id =  "selectCount"  resultType="java.lang.Integer">
