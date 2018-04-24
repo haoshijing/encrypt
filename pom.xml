@@ -103,10 +103,7 @@
             <version>4.0.0</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
@@ -133,6 +130,6 @@
                 </configuration>
             </plugin>
         </plugins>
-        <finalName>enrypt</finalName>
+        <finalName>encrypt</finalName>
     </build>
 </project>
