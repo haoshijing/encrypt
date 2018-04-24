@@ -21,4 +21,4 @@ status int comment '账号状态'
 
 Insert into t_admin(id,userName ,password ,saltPassword,insertTime,lastUpdateTime ,status)
 select
- null , 'admin','74cb1c732d55c3aa93bad590ffe1ee8b','123',  unix_timestamp()*1000, unix_timestamp()*1000,1;
+ null , 'admin','77d3b7ed9db7d236b9eac8262d27f6a5','123',  unix_timestamp()*1000, unix_timestamp()*1000,1;

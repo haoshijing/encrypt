@@ -6,5 +6,5 @@ import lombok.Data;
 public class DevAuthRequestVo {
     private Integer page;
     private Integer limit;
-    private String deviceId;
+    private String devId;
 }
