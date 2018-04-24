@@ -22,7 +22,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
     @Autowired
     private AdminAuthCacheService adminAuthCacheService;
 
-    private List<String> whiteUrlList = Lists.newArrayList("/admin","/login","/content/upload");
+    private List<String> whiteUrlList = Lists.newArrayList("/login","/logout");
     /**
      * This implementation always returns {@code true}.
      */
