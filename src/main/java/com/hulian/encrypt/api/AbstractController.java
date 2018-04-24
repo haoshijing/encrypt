@@ -1,7 +1,7 @@
 package com.hulian.encrypt.api;
 
 
-import com.hulian.encrypt.auth.AdminAuthCacheService;
+import com.hulian.encrypt.service.AdminAuthCacheService;
 import com.hulian.encrypt.auth.AdminAuthInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 

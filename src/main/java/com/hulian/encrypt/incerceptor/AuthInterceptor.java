@@ -4,8 +4,8 @@ package com.hulian.encrypt.incerceptor;
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.collect.Lists;
 
-import com.hulian.encrypt.auth.AdminAuthCacheService;
 import com.hulian.encrypt.auth.AdminAuthInfo;
+import com.hulian.encrypt.service.AdminAuthCacheService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

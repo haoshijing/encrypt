@@ -5,7 +5,7 @@ package com.hulian.encrypt.api.auth;
 import com.hulian.encrypt.api.AbstractController;
 import com.hulian.encrypt.api.auth.request.LoginDataRequest;
 import com.hulian.encrypt.api.auth.response.LoginResponse;
-import com.hulian.encrypt.auth.AdminAuthCacheService;
+import com.hulian.encrypt.service.AdminAuthCacheService;
 import com.hulian.encrypt.auth.AdminAuthInfo;
 import com.hulian.encrypt.base.ApiResponse;
 import com.hulian.encrypt.base.RetCode;
