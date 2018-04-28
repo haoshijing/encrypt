@@ -37,6 +37,6 @@ public class WebMvcConf extends WebMvcConfigurerAdapter {
                 .addPathPatterns("/login")
                 .addPathPatterns("/user/**");
         registry.addInterceptor(authInterceptor)
-                .addPathPatterns("/**");
+                .addPathPatterns("/**").excludePathPatterns("/deviceService/*");
     }
 }
