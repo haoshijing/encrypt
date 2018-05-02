@@ -1,3 +1,5 @@
+CREATE DATABASE encrypt DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+use encrypt;
 drop table  if EXISTS encrypt;
 create table devauth(
   id int primary key auto_increment comment '主键id',
