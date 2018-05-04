@@ -7,6 +7,10 @@ import java.security.MessageDigest;
 @Repository
 public class CheckService {
 
+    public static void main(String[] args) {
+        System.out.println("args = [" + createEncryptStr("A8-86-DD-90-72-D0") + "]");
+    }
+
     public static String createEncryptStr(String str){
         return md5(getEncryptStr(str),true);
     }
@@ -16,18 +20,67 @@ public class CheckService {
     }
 
     private static String getEncryptStr(String str){
-        byte[] datas = str.getBytes();
 
         StringBuilder stringBuilder = new StringBuilder("");
-        for(int i = 0; i < datas.length;i++){
-            int v = datas[i] & (0xFF);
-            String hv = Integer.toHexString(v);
-            if (hv.length() < 2) {
-                stringBuilder.append(0);
+        for(int i = 0; i < str.length();i++){
+            char ch = str.charAt(i);
+            if(ch == '-'){
+                stringBuilder.append(ch);
+            }else{
+                int v = (hexCharToInt(str.charAt(i)) << 2)  ^ 0xef;
+                String hv = Integer.toHexString(v);
+                stringBuilder.append(hv);
             }
-            stringBuilder.append(hv);
         }
         return stringBuilder.toString().toUpperCase();
+    }
+
+    private static int hexCharToInt(char ch){
+        switch (ch){
+            case '0':
+                return 0;
+            case '1':
+                return 1;
+            case '2':
+                return 2;
+            case '3':
+                return 3;
+            case '4':
+                return 4;
+            case '5':
+                return 5;
+            case '6':
+                return 6;
+            case '7':
+                return 7;
+            case '8':
+                return 8;
+            case '9':
+                return 9;
+            case 'A':
+            case 'a':
+                return 10;
+            case 'B':
+            case 'b':
+                return 11;
+
+            case 'C':
+            case 'c':
+                return 12;
+
+            case 'D':
+            case 'd':
+                return 13;
+
+            case 'E':
+            case 'e':
+                return 14;
+
+            case 'F':
+            case 'f':
+                return 15;
+        }
+        return 0;
     }
 
 
@@ -80,4 +133,5 @@ public class CheckService {
         }
         return md5str.toString().toUpperCase();
     }
+
 }
